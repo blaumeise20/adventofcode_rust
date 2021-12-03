@@ -10,7 +10,7 @@ impl Day for Day2 {
 		for l in input.lines() {
 			let mut parts = l.split(" ");
 			let action = parts.next().unwrap();
-			let value = parts.next().unwrap().parse::<usize>().unwrap();
+			let value = parts.next().unwrap().parse::<u32>().unwrap();
 			match action {
 				"forward" => horizontal += value,
 				"down" => depth += value,
@@ -29,7 +29,7 @@ impl Day for Day2 {
 		for l in input.lines() {
 			let mut parts = l.split(" ");
 			let action = parts.next().unwrap();
-			let value = parts.next().unwrap().parse::<usize>().unwrap();
+			let value = parts.next().unwrap().parse::<u32>().unwrap();
 			match action {
 				"forward" => { horizontal += value; depth += aim * value; },
 				"down" => aim += value,

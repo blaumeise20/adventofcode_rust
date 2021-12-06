@@ -1,22 +1,18 @@
 use crate::Day;
-
 pub fn new() -> Day3 { Day3 }
-
 pub struct Day3;
+
 impl Day for Day3 {
 	fn part_1(&mut self, input: &str) -> String {
 		let lines = input.lines().collect::<Vec<_>>();
 		let mut gamma = String::new();
-		let mut epsilon = String::new();
-
 		for index in 0..lines[0].len() {
-			let more_zeros = has_more_zeros(&lines, index);
-			gamma  .push(if more_zeros { '0' } else { '1' });
-			epsilon.push(if more_zeros { '1' } else { '0' });
+			gamma.push(if has_more_zeros(&lines, index) { '0' } else { '1' });
 		}
-
+		let epsilon = usize::from_str_radix(&gamma.chars()
+													.map(|c| if c == '0' { '1' } else { '0' })
+													.collect::<String>(), 2).unwrap();
 		let gamma = usize::from_str_radix(&gamma, 2).unwrap();
-		let epsilon = usize::from_str_radix(&epsilon, 2).unwrap();
 		(gamma * epsilon).to_string()
 	}
 

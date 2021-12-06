@@ -1,8 +1,7 @@
 use crate::Day;
-
 pub fn new() -> Day2 { Day2 }
-
 pub struct Day2;
+
 impl Day for Day2 {
 	fn part_1(&mut self, input: &str) -> String {
 		let mut horizontal = 0;

@@ -1,8 +1,7 @@
 use crate::Day;
-
 pub fn new() -> Day1 { Day1 }
-
 pub struct Day1;
+
 impl Day for Day1 {
 	fn part_1(&mut self, input: &str) -> String {
 		let mut lines = input.lines().map(|l| l.parse::<i32>().unwrap());

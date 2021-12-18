@@ -2,6 +2,7 @@
 #![feature(associated_type_defaults)]
 #![feature(box_syntax)]
 use std::{env::args, fmt::Display, fs::File, io::Read, time::Instant};
+mod util;
 
 mod _2021;
 

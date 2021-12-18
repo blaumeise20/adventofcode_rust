@@ -53,4 +53,4 @@ pub trait Day {
     fn part_1(&mut self, input: &str) -> String;
     #[allow(unused_variables)]
     fn part_2(&mut self, input: &str) -> String { "".to_string() }
-}}
+}

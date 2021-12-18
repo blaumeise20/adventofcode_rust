@@ -5,6 +5,7 @@ mod day_2;
 mod day_3;
 mod day_4;
 mod day_5;
+mod day_6;
 
 pub fn new(day: i32) -> Option<Box<dyn Day>> {
 	match day {
@@ -13,6 +14,8 @@ pub fn new(day: i32) -> Option<Box<dyn Day>> {
 		3 => Some(box day_3::new()),
 		4 => Some(box day_4::new()),
 		5 => Some(box day_5::new()),
+		6 => Some(box day_6::new()),
+
 		_ => None
 	}
 }

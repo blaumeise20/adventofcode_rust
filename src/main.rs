@@ -2,6 +2,7 @@
 #![feature(associated_type_defaults)]
 #![feature(box_syntax)]
 use std::{env::args, fmt::Display, fs::File, io::Read, time::Instant};
+
 mod _2021;
 
 fn main() {
@@ -44,9 +45,6 @@ fn main() {
 pub fn log<T: Display>(label: &str, value: T) {
     println!("\x1b[1m{}:\x1b[m {}", label, value);
 }
-pub fn log_result<T: Display>(label: &str, value: T) {
-    println!("\x1b[1m{}:\x1b[m \x1b[4;33m{}\x1b[m", label, value);
-}
 pub fn debug() {
     log("Debug", "Debug");
 }
@@ -55,4 +53,4 @@ pub trait Day {
     fn part_1(&mut self, input: &str) -> String;
     #[allow(unused_variables)]
     fn part_2(&mut self, input: &str) -> String { "".to_string() }
-}
+}}

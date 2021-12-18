@@ -7,6 +7,7 @@ mod day_4;
 mod day_5;
 mod day_6;
 mod day_7;
+mod day_8;
 mod day_9;
 mod day_10;
 mod day_11;
@@ -26,6 +27,7 @@ pub fn new(day: i32) -> Option<Box<dyn Day>> {
 		5 => Some(box day_5::new()),
 		6 => Some(box day_6::new()),
 		7 => Some(box day_7::new()),
+		8 => Some(box day_8::new()),
 		9 => Some(box day_9::new()),
 		10 => Some(box day_10::new()),
 		11 => Some(box day_11::new()),
